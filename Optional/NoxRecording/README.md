@@ -2,11 +2,12 @@ This is a Nox recording to run MP Apoc, in an instance set to 480x800. It is slo
 
 To integrate this with your Nox.
 
-* Find the records file for your Nox installation.
+* Find the records folder for your Nox installation. Normally this is at C:\Users\{YOUR USERNAME}\AppData\Local\Nox\record
 * Copy the 0db673e1e0744fcaa7aba186f5cd8ff6 file here.
-* Open records in a text editor. You will see recordings in JSON format. Add this to the recording, just after the first opening curly bracket
+* Open records in a text editor. You will see recordings in JSON format (assuming you made any). Add this near the top, just after the first opening curly bracket
 
-    "0db673e1e0744fcaa7aba186f5cd8ff6": {
+   	~~~~ 
+	"0db673e1e0744fcaa7aba186f5cd8ff6": {
         "combination": "false",
         "name": "Rerun MP",
         "needShow": "true",
@@ -23,7 +24,7 @@ To integrate this with your Nox.
         },
         "priority": "0",
         "time": "1567107295"
-    },
+    },	~~~~
 	
 and save.
 
