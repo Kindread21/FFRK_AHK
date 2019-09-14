@@ -34,8 +34,8 @@ For Recovery to work, when a new Apoc comes out, you will have to overwrite AHKS
 This was developed and tested using the below setup. 
 
   * Nox instance name to FFRK_AHK (or change AppName in the script to match yours), with FFRK installed with your account.
-  * Desktop scaling set to 125% (rightclick on desktop, Display Settings -> Display -> Scaling and Layout).
-  * AHK must be running as administrator to be allowed to Click.
+  * Desktop scaling set to 125% (rightclick on desktop, Display Settings -> Display -> Scaling and Layout). If you change it to 125%, you should restart your PC as not all apps (Nox included) scale properly without a reboot.
+  * AHK must be running as administrator to be allowed to Click. Find the exe in Program files\Autohotkeys and change it to always run as admin.
   * Nox 6.2.8.0
   * Android instance 7.1.2
   * Pin to Top enabled
@@ -70,7 +70,7 @@ and change it to
   
   forceFullScreenScan := true
   
-**Don't forget to restart the script after this!** This flag tells AHK to search the entire screen instead of trying to find the emulator app first. Its a fair bit slower though. 
+**Don't forget to save and restart the script after this. Ctrl + ~ t to reload from disk, Ctrl + 1 to start again.** This flag tells AHK to search the entire screen instead of trying to find the emulator window and search there. Its a fair bit slower though. 
 
 If this now works when it didn't before, the issue was with AHK detecting the app. If you're happy with the speed you can use it like this. Otherwise you can try to investigate further, using WindowSpy (installed with AHK) to try to figure out what the Window Name is, and changing AppName in the script to match this.
 
@@ -82,7 +82,7 @@ To start with, get the basic run loop working.
 
 * Open your emu to the D180/D220 selection screen and leave it off to the side of the screen. 
 * Open Snipping Tool (Window Key, type Snipping Tool), and open \AHKSearch\FFRK\Basic and  \AHKSearch\FFRK\Apoc in explorer. There are about 12 PNGs here. Looking at the images, together with their names, should be enough to know what you need to make snippets off. 
-* Go through the steps to start a fight and get back to the selection screen yourself, taking and saving snippets to replace the images as you go. Just take the next snippet, restart the script, and see if it clicks the image. You should aim to make images similar to the existing images, but they don't have to be pixel perfect. Be careful not to get any animations in your images.
+* Go through the steps to start a fight and get back to the selection screen, taking and saving snippets to replace the images as you go. Just take the next snippet, restart the script, and see if it clicks the image. You should aim to make images similar to the existing images, but they don't have to be pixel perfect. Be careful not to get any animations in your images.
 
 Once you have replaced all of these images, the basic run loop should work. Leave it running for a few iterations to be certain. You might want to replace the Recovery\ConnectionRetry image as well, in case the game times out on a connection. The only thing that should stop the loop now is crashes, Emulator dialogs, Daily Missions, and the 13h00 GMT reset.
 
