@@ -22,9 +22,9 @@ Open your Nox Instance. Ensure you have a Party that can autobattle the MP Apoc,
 
 Run the script.
 
-Press Control and 1 together to start the script. If nothing happens you might need to tweak your setup, or bite the bullet and Get it to work for your setup.
+Press **Control and 1** together to start the script. If nothing happens you might need to tweak your setup, or bite the bullet and Get it to work for your setup.
 
-Press Control and Tilde (~) to stop (it actually reloads the script).
+Press **Control and Tilde (~)** to stop (it actually reloads the script).
 
 ## Upkeep
 For Recovery to work, when a new Apoc comes out, you will have to grab a pic of a portion of the clickable area, and overwrite AHKSearch\FFRK\Weekly\WeeklyApoc.PNG with it. If the home icon for FFRK changes, you will have to get a new pic of it and overwrite AHKSearch\FFRK\Recover\FFRKIcon.PNG.
