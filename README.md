@@ -34,7 +34,7 @@ For Recovery to work, when a new Apoc comes out, you will have to overwrite AHKS
 This was developed and tested using the below setup. 
 
   * Nox instance name to FFRK_AHK (or change AppName in the script to match yours), with FFRK installed with your account.
-  * Desktop scaling set to 125% (rightclick on desktop, Display Settings -> Display -> Scaling and Layout). Note if you change it, you should restart your PC as not all apps (Nox included) scale properly till a reboot.
+  * Desktop scaling set to 125% (rightclick on desktop, Display Settings -> Display -> Scaling and Layout). If you change it to 125%, you should restart your PC as not all apps (Nox included) scale properly without a reboot.
   * AHK must be running as administrator to be allowed to Click.
   * Nox 6.2.8.0
   * Android instance 7.1.2
