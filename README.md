@@ -44,15 +44,17 @@ If your setup is different, you should be able to get most, if not all, of the f
 
 If you would like to use a different emulator, you can try using the provided images. First have the emulator setup to the same resolution. If it renders pictures similarly to Nox it might just work.
 
-### Advanced settings
+### Emulator Settings
 
+Resolution:
   Width: 480		Height: 800		DPI: 160		
 
 Even if you use another emulator, you will have to use resolutions similar to this. If your emulator doesn't provide the option, but lets you resize the window, try to resize it to a 480x800 window (using Paint to make a 480x800 square as guide will help).
 
-### Interface Settings
-  Fixed Window size checked (to not accidentally drag the size)
-	Remember Size and Position checked (If the script attempts to restart the instance this ensures the instance appears in the same place)
+Interface Settings:
+
+	Fixed Window size checked (to not accidentally drag the size)
+	Remember Size and Position checked (If the script attempts to restart the instance this ensures the instance appears in the same place) and doesn't cover anything.
 	
   
 ## Getting it to work for a different Setup
