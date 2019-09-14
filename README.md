@@ -70,7 +70,7 @@ and change it to
   
   forceFullScreenScan := true
   
-**Don't forget to restart the script after this!** This flag tells AHK to search the entire screen instead of trying to find the emulator app first. Its a fair bit slower though. 
+**Don't forget to save and restart the script after this. Ctrl + ~ t to reload from disk, Ctrl + 1 to start again.** This flag tells AHK to search the entire screen instead of trying to find the emulator window and search there. Its a fair bit slower though. 
 
 If this now works when it didn't before, the issue was with AHK detecting the app. If you're happy with the speed you can use it like this. Otherwise you can try to investigate further, using WindowSpy (installed with AHK) to try to figure out what the Window Name is, and changing AppName in the script to match this.
 
