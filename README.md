@@ -27,10 +27,11 @@ Press **Control and 1** together to start the script. If nothing happens you mig
 Press **Control and Tilde (~)** to stop (it actually reloads the script).
 
 ## Upkeep
-For Recovery to work, when a new Apoc comes out, you will have to grab a pic of a portion of the clickable area, and overwrite AHKSearch\FFRK\Weekly\WeeklyApoc.PNG with it. If the home icon for FFRK changes, you will have to get a new pic of it and overwrite AHKSearch\FFRK\Recover\FFRKIcon.PNG.
+For Recovery to work, when a new Apoc comes out, you will have to overwrite AHKSearch\FFRK\Weekly\WeeklyApoc.PNG with a new image. If the home icon for FFRK changes, you will have to get a new pic of it and overwrite AHKSearch\FFRK\Recover\FFRKIcon.PNG.
+
 
 ## Setup:
-Note that this was developed and tested using the below setup. 
+This was developed and tested using the below setup. 
 
   * Nox instance name to FFRK_AHK (or change AppName in the script to match yours), with FFRK installed with your account.
   * Desktop scaling set to 125% (rightclick on desktop, Display Settings -> Display -> Scaling and Layout).
@@ -40,9 +41,9 @@ Note that this was developed and tested using the below setup.
   * Pin to Top enabled
 
 
-If your setup is different, you should be able to get most, if not all, of the features after about a half hour of work (mostly just using Snipping Tool to get your own images). 
+If your setup is different, you should be able to get most of the features after about a half hour of work (mostly just using Snipping Tool to get your own images). 
 
-If you would like to use a different emulator, you can try using the provided images. First have the emulator setup to the same resolution. If it renders pictures similarly to Nox it might just work.
+If you would like to use a different emulator, you can try using the provided images. First have the emulator setup to the same resolution, and have the same Window Title (FFRK_AHK). If it renders pictures similarly to Nox it might just work.
 
 ### Emulator Settings
 
@@ -55,10 +56,11 @@ Interface Settings:
 
 	Fixed Window size checked (to not accidentally drag the size)
 	Remember Size and Position checked (If the script attempts to restart the instance this ensures the instance appears in the same place) and doesn't cover anything.
-	
+
+---------------------------------------------------------------------
   
 ## Getting it to work for a different Setup
-Almost all the functionality should work as long as you have correctly matching images for the scripts to use. If your setup doesn't match the test configuration exactly, capturing your own images should solve it.
+Most functionality should work as long as you have correctly matching images for the scripts to use. If your setup doesn't match the test configuration exactly, capturing your own images should solve things.
 
 But before going down that path, if you're happy with leaving your desktop scaling at 125%, see if you can get the provided images to work, even if you're not using Nox. If your emulator allows you to set the resolution to 480x800, and you can name the instance FFRK_AHK, its worth a try. If you still aren't seeing any clicks, open the script in a text editor, find 
 
@@ -68,20 +70,23 @@ and change it to
   
   forceFullScreenScan := true
   
-**Don't forget to restart the script after this!** This flag tells AHK to search the entire screen instead of trying to find the emulator app first. Its a fair bit slower though. If this now works when it didn't before, the issue was with AHK detecting the app.
+**Don't forget to restart the script after this!** This flag tells AHK to search the entire screen instead of trying to find the emulator app first. Its a fair bit slower though. 
 
-If you're happy with the speed you can use it like this. Otherwise you can try to investigate further, using WindowSpy (installed with AHK) to try to figure out what the Window Name is, and changing AppName in the script to match this.
+If this now works when it didn't before, the issue was with AHK detecting the app. If you're happy with the speed you can use it like this. Otherwise you can try to investigate further, using WindowSpy (installed with AHK) to try to figure out what the Window Name is, and changing AppName in the script to match this.
 
 If you still aren't getting clicks, you'll have to capture your own images. Leave forceFullScreenScan to true for now, and if you had to track down the Window Name note it somewhere. How much work you put into it depends on how robust you want the script to be
 
+
 ### Fixing the Basic Run Loop
-To start with, get the basic run loop working. 
+To start with, get the basic run loop working.
 
 * Open your emu to the D180/D220 selection screen and leave it off to the side of the screen. 
-* Open Snipping Tool (Window Key, type Snipping Tool), and open \AHKSearch\FFRK\Basic and  \AHKSearch\FFRK\Apoc in explorer. There are about 12 PNGs here. Looking at the images, together with their names, should be enough to know what you need to make snippets off.
-* Go through the steps to start a fight and get back to the selection screen yourself, taking and saving snippets to replace the images as you go. You should aim to make them similar to the existing images, but it doesn't have to be pixel perfect.
+* Open Snipping Tool (Window Key, type Snipping Tool), and open \AHKSearch\FFRK\Basic and  \AHKSearch\FFRK\Apoc in explorer. There are about 12 PNGs here. Looking at the images, together with their names, should be enough to know what you need to make snippets off. 
+* Go through the steps to start a fight and get back to the selection screen yourself, taking and saving snippets to replace the images as you go. Just take the next snippet, restart the script, and see if it clicks the image. You should aim to make images similar to the existing images, but they don't have to be pixel perfect. Be careful not to get any animations in your images.
 
-Once you have replaced all of these images, the basic run loop should work. You might want to replace the Recovery\ConnectionRetry image as well, in case the game times out on a connection. The only thing that should stop the loop now is crashes, Emulator dialogs, Daily Missions, and the 13h00 GMT reset.
+Once you have replaced all of these images, the basic run loop should work. Leave it running for a few iterations to be certain. You might want to replace the Recovery\ConnectionRetry image as well, in case the game times out on a connection. The only thing that should stop the loop now is crashes, Emulator dialogs, Daily Missions, and the 13h00 GMT reset.
+
+If its working now, try changing forceFullScreenScan back to false. If it now stops working you likely still need to figure out the window's name and change AppName to match (or you can leave it in the slower fullScreenScan mode).
 
 
 ### Fixing Recovery steps ###
@@ -92,6 +97,8 @@ To test it out, just close the app, so you're back at Home, make sure the script
 For some of the images, you'll have to wait for the Daily Mission confirmation screen, or RW rewards. If you leave the script running, and assuming it doesn't hit a freeze issue, it'll eventually come to a stop at one of these dialogs, so you can then take the image at your convenience.
 
 ### Fixing Hard recovery and emulator errors ###
-Replace all the images in \Nox. This should click away temporary errors like Nox detecting a connection loss. It also drives the idle timeout functionality. Unfortunately these are pretty specific to Nox. If you're using a different emulator, but they have analogous buttons and dialogs, you can try replacing the images with those, but no guarantees. Do not change the folder name from Nox however, as the script is currently expecting in these directories. If you make a new folder or change a filename you'll have to edit the script to match.
+Replace all the images in \Nox. Unfornuately some of them might be difficult to reproduce. But by this point you can just leave the emulator running, and when it hits an issue it should remain waiting there, for you to easily take a picture.
+
+This step should allow clicking away temporary errors like Nox detecting a connection loss. It also drives the idle timeout functionality. Unfortunately these are pretty specific to Nox. If you're using a different emulator, but they have analogous buttons and dialogs, you can try replacing the images with those, but no guarantees. Do not change the folder name from Nox however, as the script is currently expecting in these directories. If you make a new folder or change a filename you'll have to edit the script to match.
 
 	
