@@ -3,7 +3,7 @@ Autohotkey Scripts for playing FFRK
 
 This is a Auto Hot Key Script (https://www.autohotkey.com/) developed mainly for farming MP Apoc using Nox. The basic run loop constantly checks the state of the game by looking for images, and clicking them. The advantage of this script over Nox recordings is that it is reactive, so it should be able to navigate the screens much quicker. It is also able to recover from crashes.
 
-Every 30 seconds, the script checks if the app has crashed (specifically, if it is on Home). If detected, it will attempt to navigate back to the dungeon so the loop can continue.
+Every 30 seconds, the script checks if the app has crashed (specifically, if it is on Home), or is on one of the less common dialogs (such as Daily mission, or Connection Retry). If detected, it will attempt to navigate back to the dungeon so the loop can continue.
 
 If no AHK driven mouse click has happened in 10 minutes, the script assumes the app is frozen. Depending on whether Nox MultiInstanceManager is visible, the script will attempt to either close the instance and restart (you can also disable this option in config, as it can be fragile), or just kill the FFRK app to return to home page. Then on the next 30 second check the 'get back to dungeon' routine will kick in.
 
