@@ -7,6 +7,11 @@ Every 30 seconds, the script checks if the app has crashed (specifically, if it 
 
 If no AHK driven mouse click has happened in 10 minutes, the script assumes the app is frozen. Depending on whether Nox MultiInstanceManager is visible, the script will attempt to either close the instance and restart (you can also disable this option in config, as it can be fragile), or just kill the FFRK app to return to home page. Then on the next 30 second check the 'get back to dungeon' routine will kick in.
 
+## Disclaimer.
+While I have tested this extensilve, and I can't see it doing anything permanently damaging to your account, I won't make any guarantees about it. So this is use at your own risk.
+
+Copyright/licensing for this script is under IDGAF.
+
 ## Basic Instructions:
 If you have the setup described below, this should be all you need to do to get up and running.
 
