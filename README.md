@@ -74,15 +74,15 @@ and change it to
 
 If this now works when it didn't before, the issue was with AHK detecting the app. If you're happy with the speed you can use it like this. Otherwise you can try to investigate further, using WindowSpy (installed with AHK) to try to figure out what the Window Name is, and changing AppName in the script to match this.
 
-If you still aren't getting clicks, you'll have to capture your own images. Leave forceFullScreenScan to true for now, and if you had to track down the Window Name note it somewhere. How much work you put into it depends on how robust you want the script to be
+If you still aren't getting clicks, you'll have to capture your own images. Leave forceFullScreenScan to true for now, and if you had to track down the Window Name note it somewhere. How much work you put into it depends on how robust you want the script to be.
 
 
 ### Fixing the Basic Run Loop
-To start with, get the basic run loop working.
+To start with, get the basic run loop working. Your first goal should be to get the script clicking *something*. I think the easiest place to start would be to get the script to click the D220 button (the image to replace is Apoc\Apocalypse.PNG). Once you know the script can do this click, completing the rest should go relatively quickly.
 
 * Open your emu to the D180/D220 selection screen and leave it off to the side of the screen. 
 * Open Snipping Tool (Window Key, type Snipping Tool), and open \AHKSearch\FFRK\Basic and  \AHKSearch\FFRK\Apoc in explorer. There are about 12 PNGs here. Looking at the images, together with their names, should be enough to know what you need to make snippets off. 
-* Go through the steps to start a fight and get back to the selection screen, taking and saving snippets to replace the images as you go. Just take the next snippet, restart the script, and see if it clicks the image. You should aim to make images similar to the existing images, but they don't have to be pixel perfect. Be careful not to get any animations in your images.
+* Go through the steps to start a fight and get back to the selection screen, taking and saving snippets to replace the images as you go. Just take the next snippet, restart the script, and see if it clicks the image. Its best to do this one image at a time. You should aim to make images similar to the existing images, but they don't have to be pixel perfect. Be careful not to get any animations in your images.
 
 Once you have replaced all of these images, the basic run loop should work. Leave it running for a few iterations to be certain. You might want to replace the Recovery\ConnectionRetry image as well, in case the game times out on a connection. The only thing that should stop the loop now is crashes, Emulator dialogs, Daily Missions, and the 13h00 GMT reset.
 
