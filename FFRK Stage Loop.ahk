@@ -21,14 +21,14 @@ ImageFolder := "C:\AHKSearch\FFRK"
 ; to hit ctrl+1 again after).
 giveBackControl := false
 
-; How often to check if the app crashed/is waiting for retry connect/daily mission/etc.
+; How often, in milliseconds, to check if the app crashed/is waiting for retry connect/daily mission/etc.
 recoveryCheckInterval := 30000
 
-; How long since the last AHK mouseclick (manual clicks don't count!) to assume 
+; How long, in milliseconds, since the last AHK mouseclick (manual clicks don't count!) to assume 
 ; the app is frozen and should be restarted.
 idleRestartCheckInterval := 600000
 
-; How long since the last AHK mouseclick (manual clicks don't count!) to assume 
+; How long, in milliseconds, since the last AHK mouseclick (manual clicks don't count!) to assume 
 ; the app is frozen and should be restarted. For long battles
 idleRestartLongCheckInterval := 1200000
 
@@ -147,9 +147,9 @@ DragRightIfImageFound(typeImageToCheck, imageToCheck)
 	
 	FindImage(imgX, imgY, FullImage, forceFullScreenScan)
 	
-	dragFromX := winX + winWidth - 10
+	dragFromX := winX + winW - 10
 	dragToX := winX + 20
-	dragY := winY + winHeight - 200
+	dragY := winY + winH - 200
 	
 	MouseMove, %dragX%, %dragY%
 	
@@ -308,7 +308,7 @@ idleCheckInterval := idleRestartCheckInterval
 Loop,
 {
 	; Basic battle loop
-	WinGetPos, winX, winY, winWidth, winHeight, %AppName%
+	WinGetPos, winX, winY, winW, winH, %AppName%
 	
 	ClickImage("Basic", "AfterBattleNext.PNG")
 	ClickImage("Apoc", "Apocalypse.PNG", 1000)
@@ -349,7 +349,7 @@ idleCheckLongInterval := idleRestartLongCheckInterval
 Loop,
 {
 	; Basic battle loop
-	WinGetPos, winX, winY, winWidth, winHeight, %AppName%
+	WinGetPos, winX, winY, winW, winH, %AppName%
 	
 	ClickImage("Basic", "AfterBattleNext.PNG")
 	ClickImage("Odin", "Odin.PNG", 1000, 20, 200)
