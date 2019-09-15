@@ -24,6 +24,8 @@ Run the script.
 
 Press **Control and 1** together to start the script. If nothing happens you might need to tweak your setup, or bite the bullet and Get it to work for your setup.
 
+Press **Control and 2** together to start a similar script for Dark Odin (Good luck!). If you get a game over the script will attempt the fight again, so if you have an Auto setup for Dark Odin that is very RNG dependant you can use this to bruteforce it.
+
 Press **Control and Tilde (~)** to stop (it actually reloads the script).
 
 ## Upkeep
