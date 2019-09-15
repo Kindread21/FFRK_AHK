@@ -7,7 +7,7 @@ Every 30 seconds, the script checks if the app has crashed (specifically, if it 
 
 If no AHK driven mouse click has happened in 10 minutes, the script assumes the app is frozen. Depending on whether Nox MultiInstanceManager is visible, the script will attempt to either close the instance and restart (you can also disable this option in config, as it can be fragile), or just kill the FFRK app to return to home page. Then on the next 30 second check the 'get back to dungeon' routine will kick in.
 
-## Disclaimer.
+## Disclaimer:
 While I have tested this extensilve, and I can't see it doing anything permanently damaging to your account, I won't make any guarantees about it. So this is use at your own risk.
 
 Copyright/licensing for this script is under IDGAF.
@@ -33,7 +33,7 @@ Press **Control and 2** together to start a similar script for Dark Odin (Good l
 
 Press **Control and Tilde (~)** to stop (it actually reloads the script).
 
-## Upkeep
+## Upkeep:
 For Recovery to work, when a new Apoc comes out, you will have to overwrite AHKSearch\FFRK\Weekly\WeeklyApoc.PNG with a new image. If the home icon for FFRK changes, you will have to get a new pic of it and overwrite AHKSearch\FFRK\Recover\FFRKIcon.PNG.
 
 
@@ -66,7 +66,7 @@ Interface Settings:
 
 ---------------------------------------------------------------------
   
-## Getting it to work for a different Setup
+## Getting it to work for a different Setup:
 Most functionality should work as long as you have correctly matching images for the scripts to use. If your setup doesn't match the test configuration exactly, capturing your own images should solve things.
 
 But before going down that path, if you're happy with leaving your desktop scaling at 125%, see if you can get the provided images to work, even if you're not using Nox. If your emulator allows you to set the resolution to 480x800, and you can name the instance FFRK_AHK, its worth a try. If you still aren't seeing any clicks, open the script in a text editor, find 
