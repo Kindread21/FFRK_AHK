@@ -407,7 +407,7 @@ lastClickTick := A_TickCount
 
 idleCheckInterval := idleRestartCheckInterval
 
-#Include CheckForVPN.ahk
+#Include *i CheckForVPN.ahk
 
 Loop,
 {
