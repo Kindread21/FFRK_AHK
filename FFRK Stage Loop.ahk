@@ -438,7 +438,8 @@ Loop,
 }
 
 ; Dark Odin Auto (I wish!). 
-; Run from the screen AFTER Magicite stage select (ie, after clicking the vortex).
+; Optimally, run from the screen AFTER Magicite stage select (ie, after clicking 
+; the vortex). But it is able to pickup from any screen along the route.
 ; Will retry on gameover, so if you have a really luck based auto run you can 
 ; leave this running to bruteforce it.
 ^2::
