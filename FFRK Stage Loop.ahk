@@ -51,7 +51,7 @@ forceFullScreenScan := false
 allowSectionedSearch := true
 
 ; What it says on the tin.
-allowStaminaRefresh := true
+allowStaminaRefresh := false
 
 ; Allowed Values: Potion Mythril Gems
 staminaRefreshType := "Potion"
